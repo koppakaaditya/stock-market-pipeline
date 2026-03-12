@@ -11,10 +11,10 @@ def main():
     output_parquet = Path("data/processed/TOP250_STOCKS_6Y_FINAL.parquet")
 
     if not stocks_path.exists():
-        raise FileNotFoundError("Run 02_get_stocks.py first.")
+        raise FileNotFoundError("Run get_stocks.py first.")
 
     if not macro_path.exists():
-        raise FileNotFoundError("Run 03_get_macro_data.py first.")
+        raise FileNotFoundError("Run get_macro_data.py first.")
 
     stocks = pd.read_parquet(stocks_path)
     macro = pd.read_parquet(macro_path)

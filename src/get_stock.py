@@ -95,7 +95,7 @@ def main():
     output_parquet = Path("data/raw/stocks_with_indicators.parquet")
 
     if not tickers_path.exists():
-        raise FileNotFoundError("Run 01_get_tickers.py first.")
+        raise FileNotFoundError("Run get_tickers.py first.")
 
     tickers = pd.read_csv(tickers_path)["Ticker"].dropna().unique().tolist()
 
